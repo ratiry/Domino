@@ -16,6 +16,7 @@ let Welcome=(props)=>{
   } = useForm()
   const onSubmit=(data)=>{
     console.log(data)
+    debugger;
     navigate(URLs.game,{
       state:data
     })
@@ -26,10 +27,10 @@ let Welcome=(props)=>{
       <form  onSubmit={handleSubmit(onSubmit) }>
         <div className={classes.Item}>
           <P>How many players</P>
-          <select  {...register('f')}>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
+          <select  {...register('ammountOfPlayers')}>
+          <option >2</option>
+          <option >3</option>
+          <option >4</option>
         </select>
         </div>
         <ButtonWithText>Play</ButtonWithText>
