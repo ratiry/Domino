@@ -1,23 +1,29 @@
 import logo from './logo.svg';
-import './App.css';
-
+import classes from './App.module.scss';
+import Header from './Header/Header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Welcome from './Pages/Welcome/Welcome';
+import Game from './Pages/Game/Game';
+import Results from './Pages/Results/Results';
+import Footer from './Footer/Footer';
+ export const URLs={
+  results:'Results',
+  game:"Game",
+  welcome:'/'
+ }
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.App_container}>
+      <Header/>
+      
+      <BrowserRouter>
+        <Routes>
+          <Route path={URLs.welcome} element={<Welcome/>}/>
+          <Route path={URLs.game} element={<Game/>}/>
+          <Route path={URLs.results} element={<Results/>}/>
+        </Routes>
+      </BrowserRouter>
+      <Footer/>
     </div>
   );
 }

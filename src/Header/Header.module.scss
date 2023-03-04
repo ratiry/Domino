@@ -1,0 +1,12 @@
+
+.Header_container{
+  background:lightblue;
+  .inner_Container{
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    img{
+      width:45px;
+    }
+  }
+}
