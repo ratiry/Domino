@@ -1,0 +1,26 @@
+.H1{
+  margin: 10px 10px;
+  font-size: 40px;
+}
+.H2{
+  margin:5px 5px;
+  font-size: 33px;
+}
+.P{
+  font-size:24px;
+  margin:0;
+  &.large{
+    font-size: 28px;
+  }
+  &.small{
+    font-size:20px;
+  }
+}
+.H1,.H2,P{
+  text-transform: uppercase;
+  font-weight: bold;
+  color:yellow;
+}
+.logo{
+  width:45px;
+}

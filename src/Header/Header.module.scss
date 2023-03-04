@@ -4,9 +4,8 @@
   .inner_Container{
     display:flex;
     justify-content:space-around;
+    align-items:center;
     width:100%;
-    img{
-      width:45px;
-    }
+
   }
 }

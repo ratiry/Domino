@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import classes from './App.module.scss';
 import Header from './Header/Header';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -15,7 +14,7 @@ function App() {
   return (
     <div className={classes.App_container}>
       <Header/>
-      
+      <div className={classes.content_Container}>
       <BrowserRouter>
         <Routes>
           <Route path={URLs.welcome} element={<Welcome/>}/>
@@ -23,6 +22,7 @@ function App() {
           <Route path={URLs.results} element={<Results/>}/>
         </Routes>
       </BrowserRouter>
+      </div>
       <Footer/>
     </div>
   );

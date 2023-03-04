@@ -3,4 +3,7 @@
   height:100vh;
   display:grid;
   grid-template-rows: 5fr 90fr 5fr;
+  .content_Container{
+    background-image: url('./Images/Content\ Background.jfif');
+  }
 }
