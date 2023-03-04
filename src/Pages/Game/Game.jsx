@@ -1,5 +1,6 @@
 
 let Game=(props)=>{
+  debugger;
   return(
     <>Game</>
   )

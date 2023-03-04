@@ -1,0 +1,22 @@
+
+form{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:25%;
+  .Item{
+  display:flex;
+  justify-content:space-between;
+  select{
+      appearance: none;
+      border: none;
+      padding: 0 1em 0 0;
+      width:20%;
+      margin: 0;
+      option{
+        display:flex;
+        justify-content: center;
+      }
+    }
+  }
+}
