@@ -1,0 +1,7 @@
+.Game_grid{
+  display:grid;
+  width:100%;
+  height:100%;
+  grid-template-columns: 15fr 70fr 15fr ;
+  grid-template-rows: 16fr 68fr 16fr;
+}
