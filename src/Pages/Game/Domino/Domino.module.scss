@@ -1,0 +1,31 @@
+
+.Domino{
+  display:flex;
+  flex-direction:column;//conditional
+  width:40px;
+  background:black;
+  justify-content:space-between;
+  height:80px;
+  margin:2px;
+  .line{
+    height:2px;
+    width:100%;
+    background:white;
+  }
+  .Half{
+    width:100%;
+    height:calc(50% - 2px);
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    .dot{
+      border-radius: 50%;
+      width:8px;
+      height:8px;
+      margin:2px;
+      background:white;
+    }
+  }
+}
