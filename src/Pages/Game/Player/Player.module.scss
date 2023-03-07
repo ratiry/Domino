@@ -3,5 +3,9 @@
   justify-content:center;
   flex-wrap: wrap;
   align-items: center;
-  
+  &.vertical{
+    flex-direction:column;
+    flex-wrap:wrap;
+    max-height:400px;
+  }
 }

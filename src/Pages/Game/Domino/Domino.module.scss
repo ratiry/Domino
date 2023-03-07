@@ -7,6 +7,20 @@
   justify-content:space-between;
   height:80px;
   margin:2px;
+  &.vertical{
+    flex-direction: row;
+    width:80px;
+    height:40px;
+    align-items: space-between;
+    .Half{
+      width:calc(50% - 2px);
+      height:100%;
+    }
+    .line{
+      height:100%;
+      width:2px;
+    }
+  }
   .line{
     height:2px;
     width:100%;
