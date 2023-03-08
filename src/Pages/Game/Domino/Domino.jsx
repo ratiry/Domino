@@ -2,7 +2,6 @@
 import classes from './Domino.module.scss';
 export  let HalfDomino=(props)=>{
   // let dotsHtml= [<div className={classes.dot}></div>]*props.dots;
-  debugger;
   switch(props.dots){
     case 0:
       return (
