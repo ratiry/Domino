@@ -7,30 +7,39 @@ import Domino from '../Domino/Domino';
     if(props.id==3 || props.id==4){
       return(
         <div className={classes.Player + ' ' + classes.vertical}>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
-          <Domino rearDots={2} frontDots={4} direction={"vertical"}/>
+                    <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={6} />
         </div>
       )
     }
@@ -55,6 +64,20 @@ import Domino from '../Domino/Domino';
           <Domino rearDots={2} frontDots={4} />
           <Domino rearDots={2} frontDots={4} />
           <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={4} />
+          <Domino rearDots={2} frontDots={6} />
       </div>
     )
   }

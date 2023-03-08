@@ -2,15 +2,15 @@
 .Domino{
   display:flex;
   flex-direction:column;//conditional
-  width:40px;
+  width:35px;
   background:black;
   justify-content:space-between;
-  height:80px;
+  height:75px;
   margin:2px;
   &.vertical{
     flex-direction: row;
-    width:80px;
-    height:40px;
+    width:75px;
+    height:35px;
     align-items: space-between;
     .Half{
       width:calc(50% - 2px);
