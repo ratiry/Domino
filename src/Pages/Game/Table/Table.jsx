@@ -31,24 +31,29 @@ let Table=(props)=>{
        TiersHtml=TiersHtml.map((T,index)=>{
         if(index %2==0){
           return <Tier>
-            {T= T.map((D,iindex)=>{
+            {T.map((D,iindex)=>{
                 if(iindex ==T.length-1){
                   return <Domino rearDots={D[0]} frontDots={D[1]}/>
                 }
                 if(D[0]==D[1]){
+                  console.log(D)
                   return <Domino rearDots={D[0]} frontDots={D[1]} direction={"double"}/>
                 }
+                return <Domino rearDots={D[0]} frontDots={D[1]} direction={"vertical"}/>
+
              })}
           </Tier>
         }else{
           return <Tier direction={"toLeft"}>
-             {T= T.map((D,iindex)=>{
+             {T.map((D,iindex)=>{
                 if(iindex ==T.length-1){
                   return <Domino rearDots={D[0]} frontDots={D[1]}/>
                 }
                 if(D[0]==D[1]){
                   return <Domino rearDots={D[0]} frontDots={D[1]} direction={"double"}/>
                 }
+                return <Domino rearDots={D[0]} frontDots={D[1]} direction={"vertical"}/>
+
              })}
           </Tier>
         }
