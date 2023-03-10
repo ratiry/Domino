@@ -13,19 +13,17 @@ let GetammountOfElsInTiers=(maxWidth,dominosLength,dominoWidth,margin)=>{
         dominosWidth=dominosWidth-TierWidth;
       }else if(dominosWidth>0){
         Tiers.push(dominosWidth/(dominoWidth+margin));
-        debugger;
         dominosWidth=0;
       }
     }
   }
-  debugger;
+  return Tiers;
 }
 let GetTierLength=(dominoWidth,margin,maxWidth,)=>{
   let FullDominoLength=dominoWidth+margin;
   let TierWidth=0;
   let shouldStop=true;
   let length=0;
-  debugger;
   while(shouldStop){
     if(TierWidth+FullDominoLength>maxWidth){
       shouldStop=false;

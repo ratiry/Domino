@@ -66,7 +66,7 @@ export  let HalfDomino=(props)=>{
  let Domino =(props)=>{
   if(props.direction ==="vertical"){
     return(
-    <div className={classes.Domino + ' ' + classes.vertical}>
+    <div ref={props.ref} className={classes.Domino + ' ' + classes.vertical}>
       <HalfDomino dots={props.rearDots}/>
       <div className={classes.line}></div>
       <HalfDomino dots={props.frontDots}/>
@@ -74,7 +74,7 @@ export  let HalfDomino=(props)=>{
     )    
   }
     return(
-      <div className={classes.Domino}>
+      <div ref={props.ref} className={classes.Domino}>
         <HalfDomino dots={props.rearDots}/>
         <div className={classes.line}></div>
         <HalfDomino dots={props.frontDots}/>

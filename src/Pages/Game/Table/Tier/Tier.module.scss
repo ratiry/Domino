@@ -1,0 +1,7 @@
+.Tier{
+  display:flex;
+  width:100% !important;
+  &.toLeft{
+   flex-direction: row-reverse;
+  }
+}
