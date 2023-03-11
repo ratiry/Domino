@@ -64,21 +64,26 @@ export  let HalfDomino=(props)=>{
   }
 }
  let Domino =(props)=>{
-  if(props.direction ==="vertical"){
-    return(
-    <div ref={props.ref} className={classes.Domino + ' ' + classes.vertical}>
-      <HalfDomino dots={props.rearDots}/>
-      <div className={classes.line}></div>
-      <HalfDomino dots={props.frontDots}/>
-    </div>
-    )    
+  switch(props.direction){
+    case "vertical":
+      return(
+        <div ref={props.ref} className={classes.Domino + ' ' + classes.vertical}>
+          {!props.isFutureDomino?<>
+            <HalfDomino dots={props.rearDots}/>
+          <div className={classes.line}></div>
+          <HalfDomino dots={props.frontDots}/></>:<div className={classes.futureDomino}></div>}
+        </div>
+        )  
+    default:
+      return(
+        <div ref={props.ref} className={classes.Domino}>
+            {!props.isFutureDomino?<>
+            <HalfDomino dots={props.rearDots}/>
+          <div className={classes.line}></div>
+          <HalfDomino dots={props.frontDots}/></>:<div className={classes.futureDomino}></div>}
+        </div>
+      )
   }
-    return(
-      <div ref={props.ref} className={classes.Domino}>
-        <HalfDomino dots={props.rearDots}/>
-        <div className={classes.line}></div>
-        <HalfDomino dots={props.frontDots}/>
-      </div>
-    )
+
  }
  export default Domino;

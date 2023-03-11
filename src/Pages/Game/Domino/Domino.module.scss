@@ -7,6 +7,13 @@
   justify-content:space-between;
   height:75px;
   margin:2px;
+  .futureDomino{
+    background:yellowgreen ;
+    width:100%;
+    background-size:100%;
+    height:100%;
+    border:2px yellow dashed;
+  }
   &.vertical{
     flex-direction: row;
     width:75px;
