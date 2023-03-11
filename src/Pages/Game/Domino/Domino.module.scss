@@ -7,6 +7,9 @@
   justify-content:space-between;
   height:75px;
   margin:2px;
+  &.inVisible{
+    opacity:0;
+  }
   .futureDomino{
     background:yellowgreen ;
     width:100%;

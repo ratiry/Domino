@@ -64,8 +64,17 @@ export  let HalfDomino=(props)=>{
   }
 }
  let Domino =(props)=>{
+  if(!props.areFutureDominosVisible & props.areFutureDominosVisible!=undefined){
+    switch(props.direction){
+      case "vertical":
+       return  <div  ref={props.ref} className={classes.Domino + ' ' + classes.vertical + " " + classes.inVisible}></div>
+      default:
+       return <div  ref={props.ref} className={classes.Domino + ' ' + classes.inVisible}></div>
+    }
+  }
   switch(props.direction){
     case "vertical":
+
       return(
         <div ref={props.ref} className={classes.Domino + ' ' + classes.vertical}>
           {!props.isFutureDomino?<>
