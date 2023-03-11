@@ -8,7 +8,7 @@ import getAmountOfElsInTiers from './../../../Helpers/getAmountOfElsInTiers';
 import Tier from './Tier/Tier';
 import {P} from './../../../Components/Typography/Typography'
 
-let Table=(props)=>{
+const Table=({dominos})=>{
 
   const [tiers, setTiers] = useState([])
 
@@ -17,53 +17,50 @@ let Table=(props)=>{
   let tier=useRef();
   
   useEffect(()=>{
-    let TiersHtml=[];
-    if(TiersHtml.length==0){
-      let maxWidth=table.current.style.maxWidth;
-      let maxWidthValue=Number(maxWidth.substr(0,maxWidth.length-2));
-      let Tiers= getAmountOfElsInTiers(maxWidthValue,props.dominos.length,75,2);
-      let index=0;
-      for(let i=0;i<Tiers.length;i++){
-        let TierHtml=[];
-        for(let ii=0;ii<Tiers[i];ii++){
-          TierHtml.push(props.dominos[index]);
-          index=index+1;
-        }
-        TiersHtml.push(TierHtml);
+    let tiersArr = [];
+    const maxWidth = table.current.style.maxWidth;
+    const maxWidthValue = Number(maxWidth.substr(0,maxWidth.length-2));
+    let tiers = getAmountOfElsInTiers(maxWidthValue,dominos.length,75,2);
+    let index = 0;
+    for(let i = 0; i < tiers.length; i++){
+      let tier = [];
+      for(let ii = 0; ii < tiers[i]; ii++){
+        tier.push(dominos[index]);
+        index = index + 1;
       }
-
-      setTiers(TiersHtml)
-      
+      tiersArr.push(tier);
     }
-  },[props.dominos])
+
+    setTiers(tiersArr)
+    
+  },[dominos])
 
   return(
     <div ref={table} style={{maxWidth: 800 + 'px'}} className={classes.Table}>
-      {tiers.map((T,index)=>{
-        if(index %2==0){
+      {tiers.map((tier,i)=>{
+        if(i%2 == 0){
           return <Tier>
-            {T.map((D,iindex)=>{
-                if(iindex ==T.length-1){
-                  return <Domino rearDots={D[0]} frontDots={D[1]}/>
-                }
-                if(D[0]==D[1]){
-                  console.log(D)
-                  return <Domino rearDots={D[0]} frontDots={D[1]} direction={"double"}/>
-                }
-                return <Domino rearDots={D[0]} frontDots={D[1]} direction={"vertical"}/>
+            {tier.map((domino, ii)=>{
+              if(ii == tier.length-1){
+                return <Domino rearDots={domino[0]} frontDots={domino[1]}/>
+              }
+              if(domino[0] == domino[1]){
+                return <Domino rearDots={domino[0]} frontDots={domino[1]} direction={"double"}/>
+              }
+              return <Domino rearDots={domino[0]} frontDots={domino[1]} direction={"vertical"}/>
 
              })}
           </Tier>
         } else {
           return <Tier direction={"toLeft"}>
-             {T.map((D,iindex)=>{
-                if(iindex ==T.length-1){
-                  return <Domino rearDots={D[0]} frontDots={D[1]}/>
+             {tier.map((domino, ii) => {
+                if(ii == tier.length-1){
+                  return <Domino rearDots={domino[0]} frontDots={domino[1]}/>
                 }
-                if(D[0]==D[1]){
-                  return <Domino rearDots={D[0]} frontDots={D[1]} direction={"double"}/>
+                if(domino[0] == domino[1]){
+                  return <Domino rearDots={domino[0]} frontDots={domino[1]} direction={"double"}/>
                 }
-                return <Domino rearDots={D[0]} frontDots={D[1]} direction={"vertical"}/>
+                return <Domino rearDots={domino[0]} frontDots={domino[1]} direction={"vertical"}/>
 
              })}
           </Tier>
