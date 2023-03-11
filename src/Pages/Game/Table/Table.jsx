@@ -7,20 +7,23 @@ import Domino from '../Domino/Domino';
 import getNumberTiers from './../../../Helpers/getAmountOfElsInTiers';
 import Tier from './Tier/Tier';
 import {P} from './../../../Components/Typography/Typography'
+import addElementsTostartAndEnd from './../../../Helpers/AddElementsTostart&end';
 
-const Table=({dominos},props)=>{
-
+const Table=(props)=>{
+  debugger;
   const [tiers, setTiers] = useState([])
-  let [areFutureDominosVisible,setAreFutureDominosVisible]=useState(false);
+  let [areFutureDominosVisible,setAreFutureDominosVisible]=useState(props.areFutureDominosVisible);
   let table=useRef();
   let [fullLengthTier,setFullLengthTier]=useState(0);
   useEffect(()=>{
     const maxWidth = table.current.style.maxWidth;
     const maxWidthValue = Number(maxWidth.substr(0,maxWidth.length-2));
+    let dominos=[...props.dominos];
+    dominos = addElementsTostartAndEnd(props.dominos,["futureDomino"]);
     let [tiersArr,fullLengthTier] =getNumberTiers(maxWidthValue,dominos);
     setTiers(tiersArr)
     setFullLengthTier(fullLengthTier);
-  },[dominos])
+  },[props.dominos])
 
   return(
     <div ref={table} style={{maxWidth: 800 + 'px'}} className={classes.Table}>

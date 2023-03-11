@@ -6,16 +6,23 @@ let Game=(props)=>{
   let location=useLocation();
   let dominos=[
     [1,6],
-    [1,2],
-    [1,2],
+    [1,6],
+    [1,6],
+    [1,6],
+    [1,6],
+    [1,6],
+    [1,6],
+    [1,6],
+    [6,6],
   ]
+  let areFutureDominosVisible=true;
   return(
     <div className={classes.Game_grid}>
       <div className={classes.Bazar}></div>
       <Player ammountOfPlayers={location.state.ammountOfPlayers} id={2}  />
       <div></div>
       <Player ammountOfPlayers={location.state.ammountOfPlayers} id={3}  />  
-      <Table dominos={dominos}/>
+      <Table areFutureDominosVisible={areFutureDominosVisible} dominos={dominos}/>
       <Player ammountOfPlayers={location.state.ammountOfPlayers} id={4}  />
       <div className={classes.Stats}></div>
       <Player ammountOfPlayers={location.state.ammountOfPlayers} id={1}  />

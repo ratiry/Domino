@@ -17,7 +17,7 @@ const getTierLength=(dominoWidth,margin,maxWidth,)=>{
 
 const getAmountOfElsInTiers=(maxWidth,dominosLength,dominoWidth,margin)=>{
   let [TierWidth, LengthTier]=getTierLength(dominoWidth,margin,maxWidth);
-  let dominosWidth=dominosLength*dominoWidth+(dominosLength)*margin;
+  let dominosWidth=dominosLength*dominoWidth+(dominosLength)*margin ;
   let Tiers=[];
   while(dominosWidth>0){
     if(dominosWidth>maxWidth){
@@ -33,6 +33,7 @@ const getAmountOfElsInTiers=(maxWidth,dominosLength,dominoWidth,margin)=>{
       }
     }
   }
+  
   return [Tiers,LengthTier];
 }
 const getNumberTiers=(maxWidthValue,dominos)=>{
@@ -42,15 +43,17 @@ const getNumberTiers=(maxWidthValue,dominos)=>{
   for(let i = 0; i < tiers.length; i++){
     let tier = [];
     for(let ii = 0; ii < tiers[i]; ii++){
-      if((i==0 & ii==0) || (ii==tiers[i]-1 & i==tiers.length-1)){
-        tier.push(["futureDomino"]);
-      }else{
-        tier.push(dominos[index]);
-      }
+
+        tier.push(dominos[index]);        
+
+      
+ 
+      
       index = index + 1;
     }
     tiersArr.push(tier);
   }
+  debugger;
   return [tiersArr,fullLengthTier];
 }
 export default getNumberTiers;
