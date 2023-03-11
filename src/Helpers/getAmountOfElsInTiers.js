@@ -1,5 +1,5 @@
 
-let getTierLength=(dominoWidth,margin,maxWidth,)=>{
+const getTierLength=(dominoWidth,margin,maxWidth,)=>{
   let FullDominoLength=dominoWidth+margin;
   let TierWidth=0;
   let shouldStop=true;
@@ -15,7 +15,7 @@ let getTierLength=(dominoWidth,margin,maxWidth,)=>{
   return [TierWidth,length];
 }
 
-let getAmountOfElsInTiers=(maxWidth,dominosLength,dominoWidth,margin)=>{
+const getAmountOfElsInTiers=(maxWidth,dominosLength,dominoWidth,margin)=>{
   let [TierWidth, LengthTier]=getTierLength(dominoWidth,margin,maxWidth);
   let dominosWidth=dominosLength*dominoWidth+(dominosLength)*margin;
   let Tiers=[];
