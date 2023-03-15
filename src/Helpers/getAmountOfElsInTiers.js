@@ -53,7 +53,6 @@ const getNumberTiers=(maxWidthValue,dominos)=>{
     }
     tiersArr.push(tier);
   }
-  debugger;
   return [tiersArr,fullLengthTier];
 }
 export default getNumberTiers;

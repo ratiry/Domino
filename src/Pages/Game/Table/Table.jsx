@@ -10,7 +10,6 @@ import {P} from './../../../Components/Typography/Typography'
 import addElementsTostartAndEnd from './../../../Helpers/AddElementsTostart&end';
 
 const Table=(props)=>{
-  debugger;
   const [tiers, setTiers] = useState([])
   let [areFutureDominosVisible,setAreFutureDominosVisible]=useState(props.areFutureDominosVisible);
   let table=useRef();

@@ -6,6 +6,12 @@
   height:50px;
   border-radius: 20px;
   border:3px solid yellow;
+  svg{
+    width:90%;
+    path{
+      fill:yellow;
+    }
+  }
 }
 .button_with_text{
   display:flex;
