@@ -5,9 +5,11 @@ import { useState, useEffect } from 'react';
 import Popup from "../../../Components/Popup/Popup";
 import Domino from "../Domino/Domino";
 let Bazar=(props)=>{
-  debugger;
   let [shouldShowPopup,setShouldShowPopup]=useState(false);
-  let dominosHtml=props.dominos.map((D)=>{return <Domino isFutureDomino={true}/>})
+  let dominosHtml=[]
+  if(props.dominos !==undefined){
+    dominosHtml=props.dominos.map((D)=>{return <Domino isFutureDomino={true}/>});
+  }
   let changeTocontrary=()=>{
     setShouldShowPopup(!shouldShowPopup);
   }
