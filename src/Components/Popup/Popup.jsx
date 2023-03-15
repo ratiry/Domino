@@ -3,7 +3,6 @@ import { ButtonWithIcon } from '../Buttons/Buttons';
 import classes from './Popup.module.scss';
 import { useEffect } from 'react';
 let Popup=(props)=>{
-  debugger;
   let EscapeKey=(e)=>{
     if(e.key === "Escape"){
       props.onClick();

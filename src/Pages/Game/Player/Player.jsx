@@ -5,12 +5,12 @@ import Domino from '../Domino/Domino';
 import { useEffect, useState } from 'react';
  let Player=(props)=>{
   let [ShouldShowDominos,setShouldShowDominos]=useState(false);
+
   useEffect(()=>{
-    debugger;
-    if(props.dominos !=undefined){
+    if(props.dominos !==undefined){
       setShouldShowDominos(true);
     }
-  },[])
+  },[props.dominos])
   if(props.id<=Number(props.ammountOfPlayers)){
     if(props.id==3 || props.id==4){
       return(

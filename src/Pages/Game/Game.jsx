@@ -3,26 +3,31 @@ import Bazar from "./Bazar/Bazar";
 import classes from './Game.module.scss';
 import Player from "./Player/Player";
 import Table from "./Table/Table";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import generateDominos from './../../Helpers/GenerateDomios';
 let Game=(props)=>{
   let location=useLocation();
+  let [dominos,setDominos]=useState([])
+  let [TableDominos,setTableDominos]=useState([]);
+  let [areFutureDominosVisible,setAreFutureDominosVisible]=useState(false);
+  let [PlayersDominos,setPlayersDiminos]=useState([]);
   useEffect(()=>{
+   let [remainingDominos,PlayersDominos]= generateDominos(Number(location.state.ammountOfPlayers));
+   setPlayersDiminos(PlayersDominos);
+   setDominos(remainingDominos);
   },[])
-  let dominos=[
- 
-  ]
-  let areFutureDominosVisible=true;
-  
+
+
   return(
     <div className={classes.Game_grid}>
       <Bazar dominos={dominos}/>
-      <Player ammountOfPlayers={location.state.ammountOfPlayers} id={2}  />
+      <Player dominos={PlayersDominos[1]} ammountOfPlayers={location.state.ammountOfPlayers} id={2}  />
       <div></div>
-      <Player dominos={dominos} ammountOfPlayers={location.state.ammountOfPlayers} id={3}  />  
-      <Table areFutureDominosVisible={areFutureDominosVisible} dominos={dominos}/>
-      <Player ammountOfPlayers={location.state.ammountOfPlayers} id={4}  />
+      <Player dominos={PlayersDominos[2]} ammountOfPlayers={location.state.ammountOfPlayers} id={3}  />  
+      <Table areFutureDominosVisible={areFutureDominosVisible} dominos={TableDominos}/>
+      <Player dominos={PlayersDominos[3]} ammountOfPlayers={location.state.ammountOfPlayers} id={4}  />
       <div className={classes.Stats}></div>
-      <Player ammountOfPlayers={location.state.ammountOfPlayers} id={1}  />
+      <Player dominos={PlayersDominos[0]} ammountOfPlayers={location.state.ammountOfPlayers} id={1}  />
       <div></div>
     </div>
   )
