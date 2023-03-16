@@ -44,8 +44,6 @@ const generateDominos=(ammountOfPlayers)=>{
   dominos=shuffle(dominos);
  let [BazarDominos,Players]=  generatePlayersDominos(ammountOfPlayers,dominos);
   dominos=BazarDominos;
-  console.log(dominos);
-  console.log(Players);
   return [dominos,Players]
 }
 

@@ -25,7 +25,6 @@ let Welcome=(props)=>{
   })
   let watchFields = watch("ammountOfPlayers"); 
   const onSubmit=(data)=>{
-    console.log(data)
     navigate(URLs.game,{
       state:data
     })
