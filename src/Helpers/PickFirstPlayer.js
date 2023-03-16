@@ -51,8 +51,10 @@ const  PickFirstPlayer=(Players)=>{
       heightstDoubles.push(-1)
     }
   }
+
   if(!CheckForSimularValuesInArray(heightstDoubles,-1)){
-    firstPlayer=indexOfMax(heightstDoubles)+1;
+    firstPlayer=indexOfMax(heightstDoubles);
+    return firstPlayer+1;
   }
   return firstPlayer;
 }

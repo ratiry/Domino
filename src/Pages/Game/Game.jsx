@@ -27,13 +27,13 @@ let Game=(props)=>{
   return(
     <div className={classes.Game_grid}>
       <Bazar dominos={dominos}/>
-      <Player dominos={PlayersDominos[1]}  ammountOfPlayers={location.state.ammountOfPlayers} id={2}  />
+      <Player dominos={PlayersDominos[1]} currentPlayer={currentPlayer} NumberSequence={sequence[2]} ammountOfPlayers={location.state.ammountOfPlayers} id={2}  />
       <div></div>
-      <Player dominos={PlayersDominos[2]} ammountOfPlayers={location.state.ammountOfPlayers} id={3}  />  
+      <Player dominos={PlayersDominos[2]} currentPlayer={currentPlayer}  NumberSequence={sequence[1]} ammountOfPlayers={location.state.ammountOfPlayers} id={3}  />  
       <Table areFutureDominosVisible={areFutureDominosVisible} dominos={TableDominos}/>
-      <Player dominos={PlayersDominos[3]} ammountOfPlayers={location.state.ammountOfPlayers} id={4}  />
+      <Player dominos={PlayersDominos[3]} currentPlayer={currentPlayer} NumberSequence={sequence[3]} ammountOfPlayers={location.state.ammountOfPlayers} id={4}  />
       <div className={classes.Stats}></div>
-      <Player dominos={PlayersDominos[0]} ammountOfPlayers={location.state.ammountOfPlayers} id={1}  />
+      <Player dominos={PlayersDominos[0]} currentPlayer={currentPlayer} NumberSequence={sequence[0]} ammountOfPlayers={location.state.ammountOfPlayers} id={1}  />
       <div></div>
     </div>
   )
